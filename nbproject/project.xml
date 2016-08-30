@@ -9,7 +9,7 @@
             <header-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects>
-                <make-dep-project>../IntentionGraph</make-dep-project>
+                <make-dep-project>../intention_graph</make-dep-project>
                 <make-dep-project>../pomdp</make-dep-project>
             </make-dep-projects>
             <sourceRootList/>

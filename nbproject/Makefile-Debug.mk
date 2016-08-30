@@ -52,39 +52,39 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=../pomdp/dist/Debug/GNU-Linux/libpomdp.a -Wl,-rpath,../IntentionGraph/dist/Debug/GNU-Linux -L../IntentionGraph/dist/Debug/GNU-Linux -lIntentionGraph
+LDLIBSOPTIONS=-Wl,-rpath,../intention_graph/dist/Debug/GNU-Linux -L../intention_graph/dist/Debug/GNU-Linux -lintention_graph ../pomdp/dist/Debug/GNU-Linux/libpomdp.a
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/testintention
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_intention
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/testintention: ../pomdp/dist/Debug/GNU-Linux/libpomdp.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_intention: ../intention_graph/dist/Debug/GNU-Linux/libintention_graph.so
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/testintention: ../IntentionGraph/dist/Debug/GNU-Linux/libIntentionGraph.so
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_intention: ../pomdp/dist/Debug/GNU-Linux/libpomdp.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/testintention: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_intention: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/testintention ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_intention ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../devel/src/eigen -I../pomdp -I../IntentionGraph -I../../devel/src/dlib-18.18 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I../intention_graph -I../pomdp -I../../devel/src/dlib-18.11 -I../../devel/src/eigen -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
+	cd ../intention_graph && ${MAKE}  -f Makefile CONF=Debug
 	cd ../pomdp && ${MAKE}  -f Makefile CONF=Debug
-	cd ../IntentionGraph && ${MAKE}  -f Makefile CONF=Debug
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/testintention
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_intention
 
 # Subprojects
 .clean-subprojects:
+	cd ../intention_graph && ${MAKE}  -f Makefile CONF=Debug clean
 	cd ../pomdp && ${MAKE}  -f Makefile CONF=Debug clean
-	cd ../IntentionGraph && ${MAKE}  -f Makefile CONF=Debug clean
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

@@ -9,16 +9,16 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=testintention
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/testintention
+CND_ARTIFACT_NAME_Debug=test_intention
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/test_intention
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
 CND_PACKAGE_NAME_Debug=testintention.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/testintention.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=testintention
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/testintention
+CND_ARTIFACT_NAME_Release=test_intention
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/test_intention
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
 CND_PACKAGE_NAME_Release=testintention.tar
 CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/testintention.tar

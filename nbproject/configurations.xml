@@ -37,15 +37,27 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>../../devel/src/eigen</pElem>
+            <pElem>../intention_graph</pElem>
             <pElem>../pomdp</pElem>
-            <pElem>../IntentionGraph</pElem>
-            <pElem>../../devel/src/dlib-18.18</pElem>
+            <pElem>../../devel/src/dlib-18.11</pElem>
+            <pElem>../../devel/src/eigen</pElem>
           </incDir>
           <commandLine>-std=c++11</commandLine>
         </ccTool>
         <linkerTool>
           <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../intention_graph"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../intention_graph"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libintention_graph.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
             <linkerLibProjectItem>
               <makeArtifact PL="../pomdp"
                             CT="3"
@@ -56,18 +68,6 @@
                             BC="${MAKE}  -f Makefile CONF=Debug"
                             CC="${MAKE}  -f Makefile CONF=Debug clean"
                             OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpomdp.a">
-              </makeArtifact>
-            </linkerLibProjectItem>
-            <linkerLibProjectItem>
-              <makeArtifact PL="../IntentionGraph"
-                            CT="2"
-                            CN="Debug"
-                            AC="true"
-                            BL="true"
-                            WD="../IntentionGraph"
-                            BC="${MAKE}  -f Makefile CONF=Debug"
-                            CC="${MAKE}  -f Makefile CONF=Debug clean"
-                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libIntentionGraph.${CND_DLIB_EXT}">
               </makeArtifact>
             </linkerLibProjectItem>
           </linkerLibItems>
